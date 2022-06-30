@@ -16,6 +16,10 @@ description: |
 website: https://github.com/matrangam/bitrise-step-swift-test
 source_code_url: https://github.com/matrangam/bitrise-step-swift-test
 support_url: https://github.com/matrangam/bitrise-step-swift-test/issues
+published_at: 2022-06-29T19:21:14.9231203+02:00
+source: 
+  git: https://github.com/matrangam/bitrise-step-swift-test.git
+  commit: 8be81ebdbc9054774dde6ceb1ffee058e5404c96
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
