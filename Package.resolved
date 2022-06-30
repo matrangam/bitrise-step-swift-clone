@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "git-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/binarybirds/git-kit",
+      "state" : {
+        "revision" : "39a9357dd22ee189022c5db4cd82c6f438b02e1f",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "shell-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/binarybirds/shell-kit",
+      "state" : {
+        "revision" : "8507fc5a1d4c9b4aca71fa69bf6030fb94229d37",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
