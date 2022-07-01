@@ -63,7 +63,9 @@ deps:
 
 
 toolkit:
-  swift: {}
+  swift: 
+    binary_location: https://github.com/matrangam/bitrise-step-swift-test/releases/download/0.0.1/bitrise-step-swift-test
+  
 
 
 inputs:
