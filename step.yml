@@ -70,17 +70,20 @@ toolkit:
 
 
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
-    opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
-      is_expand: true
-      is_required: true
-      value_options: []
+    - repository_url: $REPOSITORY_URL
+      opts:
+        title: The URL of the repo to clone
+        is_required: true
+    - clone_destination: $CLONE_DESTINATION
+      opts:
+        title: The directory to clone into
+        is_required: true
+    - checkout_branch: $CHECKOUT_BRANCH
+      opts:
+        title: The branch to checkout, if omitted defaults to the remote's HEAD. Delegates to the --branch flag of git clone.
+    - shallow_clone: $SHALLOW_CLONE
+      opts:
+        title: If specified, will delegate to the --depth flag and pass the value of 1. Additionally, will pass --single-branch and --no-tags. If omitted, will perform a full clone.
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:
