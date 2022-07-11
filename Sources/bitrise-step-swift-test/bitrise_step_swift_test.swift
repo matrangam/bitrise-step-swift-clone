@@ -6,7 +6,7 @@ public struct bitrise_step_swift_test {
     public static func main() {
         let env = ProcessInfo.processInfo.environment
         let repoURL = env["REPOSITORY_URL"]
-        print("HEYO: \(repoURL ?? "NOEN")")
+        print("HEYO: \(repoURL ?? "NONE")")
         
         let git = Git(path: "$PWD")
         do {
