@@ -174,16 +174,16 @@ private extension Config {
         checkoutBranch: String? = nil,
         cloneDepth: String? = nil
     ) {
-        if let repositoryURL {
+        if let repositoryURL = repositoryURL {
             setenv("repository_url", repositoryURL, 1)
         }
-        if let cloneDestination {
+        if let cloneDestination = cloneDestination{
             setenv("clone_destination", cloneDestination, 1)
         }
-        if let checkoutBranch {
+        if let checkoutBranch = checkoutBranch {
             setenv("checkout_branch", checkoutBranch, 1)
         }
-        if let cloneDepth {
+        if let cloneDepth = cloneDepth {
             setenv("clone_depth", cloneDepth, 1)
         }
     }
