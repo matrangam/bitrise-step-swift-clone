@@ -36,7 +36,6 @@ func buildGitCommand(config: Config) -> String {
     }
 
     return commands.joined(separator: " ")
-    
 }
 
 func createClonePath(_ cloneDest: String) -> AbsolutePath? {
