@@ -3,7 +3,7 @@ import GitKit
 import TSCBasic
 
 @main
-public struct bitrise_step_swift_test {
+public struct bitrise_step_swift_clone {
     public static func main() {
         guard let config = parseConfig() else {
             print("Unable to parse config")

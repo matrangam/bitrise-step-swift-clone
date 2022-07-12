@@ -1,5 +1,5 @@
 import XCTest
-@testable import bitrise_step_swift_test
+@testable import bitrise_step_swift_clone
 
 let expectedRepoURL = "http://bitrise.io"
 let expectedCloneDestination = "_tmp"
