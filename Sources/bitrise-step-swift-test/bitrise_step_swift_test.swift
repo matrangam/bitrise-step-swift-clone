@@ -7,11 +7,11 @@ public struct bitrise_step_swift_test {
     public static func main() {
         guard let config = parseConfig() else {
             print("Unable to parse config")
-            return
+            exit(1)
         }
         guard let clonePath = createClonePath(config.cloneDest) else {
             print("Unable to create clone path")
-            return
+            exit(1)
         }
 
         let git = Git(path: clonePath.pathString)
@@ -22,7 +22,9 @@ public struct bitrise_step_swift_test {
             print(output)
         } catch {
             print(error)
+            exit(1)
         }
+        exit(0)
     }
 }
 

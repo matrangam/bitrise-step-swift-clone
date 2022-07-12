@@ -6,7 +6,6 @@ let expectedCloneDestination = "_tmp"
 let expectedCheckoutBranch = "test_branch"
 let expectedCloneDepth = "1"
 
-
 final class BuildGitCommandTests: XCTestCase {
     func testFullyPopulatedConfig() {
         let config = Config(
