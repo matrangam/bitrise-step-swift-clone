@@ -16,7 +16,7 @@ public struct bitrise_step_swift_test {
 
         let git = Git(path: clonePath.pathString)
         let gitCommand = buildGitCommand(config: config)
-        print("YOOOOOOOOOOO: \(gitCommand)")
+        
         do {
             let output = try git.run(.raw(gitCommand))
             print(output)
@@ -54,9 +54,11 @@ func createClonePath(_ cloneDest: String) -> AbsolutePath? {
 func parseConfig() -> Config? {
     let env = ProcessInfo.processInfo.environment
     guard let repoURL = env["repository_url"] else {
+        print("Missing required config repository_url")
         return nil
     }
     guard let cloneDest = env["clone_destination"] else {
+        print("Missing required config clone_destination")
         return nil
     }
     let checkoutBranch = env["checkout_branch"]
