@@ -63,11 +63,7 @@ deps:
 
 
 toolkit:
-  swift: 
-    binary_location: https://github.com/matrangam/bitrise-step-swift-test/releases/download/0.0.1/bitrise-step-swift-test
-    executable_name: bitrise-step-swift-test
-  
-
+  swift: {}
 
 inputs:
     - repository_url: $REPOSITORY_URL
@@ -76,14 +72,14 @@ inputs:
         is_required: true
     - clone_destination: $CLONE_DESTINATION
       opts:
-        title: The directory to clone into
+        title: A path relative to the bitrise.yml where the repo will be cloned.
         is_required: true
     - checkout_branch: $CHECKOUT_BRANCH
       opts:
         title: The branch to checkout, if omitted defaults to the remote's HEAD. Delegates to the --branch flag of git clone.
-    - shallow_clone: $SHALLOW_CLONE
+    - clone_depth: $CLONE_DEPTH
       opts:
-        title: If specified, will delegate to the --depth flag and pass the value of 1. Additionally, will pass --single-branch and --no-tags. If omitted, will perform a full clone.
+        title: If specified, will pass the value to the --depth flag.  If omitted, will do a full clone
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:
