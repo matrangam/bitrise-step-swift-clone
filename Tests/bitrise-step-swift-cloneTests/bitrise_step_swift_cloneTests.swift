@@ -145,7 +145,7 @@ final class ParseConfigTests: XCTestCase {
         )
 
         // Then
-        XCTAssertThrows(ConfigParsingError.repositoryURLNotProvided, {
+        XCTAssertThrows(Config.ParsingError.repositoryURLNotProvided, {
             // When
             _ = try Config()
         })
@@ -160,7 +160,7 @@ final class ParseConfigTests: XCTestCase {
         )
 
         // Then
-        XCTAssertThrows(ConfigParsingError.cloneDestinationNotProvided, {
+        XCTAssertThrows(Config.ParsingError.cloneDestinationNotProvided, {
             // When
             _ = try Config()
         })

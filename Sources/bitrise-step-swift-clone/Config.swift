@@ -27,10 +27,10 @@ struct Config {
 
     init(environment: [String: String] = ProcessInfo.processInfo.environment) throws {
         guard let repositoryURL = environment[EnvKey.repositoryURL.rawValue] else {
-            throw ConfigParsingError.repositoryURLNotProvided
+            throw ParsingError.repositoryURLNotProvided
         }
         guard let cloneDestination = environment[EnvKey.cloneDestination.rawValue] else {
-            throw ConfigParsingError.cloneDestinationNotProvided
+            throw ParsingError.cloneDestinationNotProvided
         }
 
         self.repositoryURL = repositoryURL
@@ -38,9 +38,9 @@ struct Config {
         self.checkoutBranch = environment[EnvKey.checkoutBranch.rawValue]
         self.cloneDepth = environment[EnvKey.cloneDepth.rawValue]
     }
-}
 
-enum ConfigParsingError: Error {
-    case repositoryURLNotProvided
-    case cloneDestinationNotProvided
+    enum ParsingError: Error {
+        case repositoryURLNotProvided
+        case cloneDestinationNotProvided
+    }
 }
