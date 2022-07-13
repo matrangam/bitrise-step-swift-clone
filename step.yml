@@ -14,8 +14,8 @@ summary: |
 description: |
   This is just a test.
 website: https://github.com/matrangam/bitrise-step-swift-clone.git
-source_code_url: https://github.com/matrangam/bitrise-step-swift-clone.git
-support_url: https://github.com/matrangam/bitrise-step-swift-clone.git/issues
+source_code_url: https://github.com/matrangam/bitrise-step-swift-clone
+support_url: https://github.com/matrangam/bitrise-step-swift-clone/issues
 published_at: 2022-06-29T19:21:14.9231203+02:00
 source: 
   git: https://github.com/matrangam/bitrise-step-swift-clone.git
@@ -60,7 +60,6 @@ deps:
   apt_get:
   - name: git
   - name: wget
-
 
 toolkit:
   swift: 
