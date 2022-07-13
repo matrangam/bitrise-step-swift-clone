@@ -30,3 +30,15 @@ struct SwiftCloneStep {
         print(output)
     }
 }
+
+enum SwiftCloneStepRunner {
+    static func run() throws -> Int32 {
+        let config = try Config()
+        let cloneStep = SwiftCloneStep(config: config)
+        let clonePath = try cloneStep.createClonePath()
+        try cloneStep.cloneRepo(into: clonePath)
+
+        print("Repo successfully cloned")
+        exit(EXIT_SUCCESS)
+    }
+}
