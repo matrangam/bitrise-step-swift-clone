@@ -64,7 +64,7 @@ deps:
 toolkit:
   swift: 
     binary_location: https://github.com/matrangam/bitrise-step-swift-clone/releases/download/0.0.2/bitrise-step-swift-clone
-    exectuable_name: bitrise-step-swift-clone
+    executable_name: bitrise-step-swift-clone
 
 inputs:
     - repository_url: $REPOSITORY_URL
