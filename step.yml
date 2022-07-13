@@ -13,12 +13,12 @@ summary: |
   Testing out exectuing Swift steps directly.
 description: |
   This is just a test.
-website: https://github.com/matrangam/bitrise-step-swift-test
-source_code_url: https://github.com/matrangam/bitrise-step-swift-test
-support_url: https://github.com/matrangam/bitrise-step-swift-test/issues
+website: https://github.com/matrangam/bitrise-step-swift-clone.git
+source_code_url: https://github.com/matrangam/bitrise-step-swift-clone.git
+support_url: https://github.com/matrangam/bitrise-step-swift-clone.git/issues
 published_at: 2022-06-29T19:21:14.9231203+02:00
 source: 
-  git: https://github.com/matrangam/bitrise-step-swift-test.git
+  git: https://github.com/matrangam/bitrise-step-swift-clone.git
   commit: 8be81ebdbc9054774dde6ceb1ffee058e5404c96
 host_os_tags:
   - osx-10.10
