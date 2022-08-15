@@ -7,10 +7,10 @@ struct SwiftCloneStep {
 
     var gitCloneArgs: [String] {
         var args = [config.repositoryURL, "--verbose"]
-        if let checkoutBranch = config.checkoutBranch {
+        if let checkoutBranch = config.checkoutBranch, !checkoutBranch.isEmpty {
             args.append(contentsOf: ["--branch", checkoutBranch])
         }
-        if let cloneDepth = config.cloneDepth {
+        if let cloneDepth = config.cloneDepth, !cloneDepth.isEmpty {
             args.append(contentsOf: ["--depth", cloneDepth])
         }
         return args
@@ -26,6 +26,7 @@ struct SwiftCloneStep {
     func cloneRepo(into destination: AbsolutePath) throws {
         let git = Git(path: destination.pathString)
         let combinedArgs = gitCloneArgs.joined(separator: " ")
+        print("Running git clone \(combinedArgs)")
         let output = try git.run(.cmd(.clone, combinedArgs))
         print(output)
     }

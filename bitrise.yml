@@ -1,4 +1,4 @@
-format_version: 4
+format_version: "4"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 app:
@@ -27,7 +27,7 @@ workflows:
           files with just './some-file' in the step's code, which would
           work for testing the step from this directory directly
           but would break if the step is included in another `bitrise.yml`.
-        run_if: true
+        run_if: "true"
         inputs:
         - path: ./_tmp
         - is_create_path: true
@@ -38,7 +38,7 @@ workflows:
           you can overwrite it if you want to, just like we did below,
           but the step would use the default value specified in the `step.yml`
           file if you would not specify another value.
-        run_if: true
+        run_if: "true"
         inputs:
         - example_step_input: Example Step Input's value
     - script:
