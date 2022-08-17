@@ -19,6 +19,7 @@ struct SwiftCloneStep {
     func createClonePath() throws -> AbsolutePath {
         let currentPath = AbsolutePath(FileManager.default.currentDirectoryPath)
         let clonePath = currentPath.appending(component: config.cloneDestination)
+        print("Cloning into path: \(clonePath)")
         try FileManager.default.createDirectory(atPath: clonePath.pathString, withIntermediateDirectories: true)
         return clonePath
     }
